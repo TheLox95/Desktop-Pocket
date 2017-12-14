@@ -1,0 +1,117 @@
+.background {
+  -fx-background-color: #2d6365; }
+
+.scroll-pane > .viewport {
+  -fx-background-color: transparent; }
+
+.scroll-pane {
+  -fx-background-color: #469280; }
+
+.side-menu {
+  -fx-background-color: #5b874d; }
+  .side-menu .icon {
+    -fx-fill: white; }
+  .side-menu:disabled {
+    -fx-opacity: 0.5; }
+  .side-menu .iconButton:hover {
+    -fx-border-color: transparent transparent transparent white;
+    -fx-border-width: 5;
+    -fx-cursor: hand; }
+
+.article {
+  -fx-background-color: #b7d0d4;
+  -fx-cursor: hand; }
+  .article .artitle-title {
+    -fx-color: #469280; }
+
+.article-list {
+  -fx-spacing: 20px; }
+
+.tagPane {
+  -fx-background-radius: 50;
+  -fx-background-color: #8cc17b;
+  -fx-opacity: 0.5; }
+  .tagPane.unselected {
+    -fx-cursor: hand; }
+  .tagPane.unselected:hover {
+    -fx-background-color: #b7d0d4; }
+  .tagPane.selected {
+    -fx-background-color: #b7d0d4; }
+  .tagPane.deactivated {
+    -fx-cursor: default;
+    -fx-background-color: #5b874d; }
+  .tagPane .closeMark {
+    -fx-background-radius: 25;
+    -fx-background-color: black;
+    -fx-opacity: 0.5;
+    -fx-padding: 1px 5px 1px 5px; }
+  .tagPane:hover .closeMark {
+    -fx-opacity: 1; }
+  .tagPane .tagLabel {
+    -fx-font-size: 14;
+    -fx-padding: 10px; }
+
+.searchTextBox {
+  -fx-padding: 15px;
+  -fx-background-radius: 50;
+  -fx-background-color: darkslategrey;
+  -fx-font-size: 18px; }
+
+#add-button {
+  -fx-box-shadow: inset 0px 1px 3px 0px #68b9ba;
+  -fx-background-color: #5b874d;
+  -fx-border-radius: 5px;
+  -fx-border-width: 1px;
+  -fx-border-color: #2d6365;
+  -fx-border-style: solid;
+  -fx-display: inline-block;
+  -fx-color: #ffffff;
+  -fx-font-family: Arial;
+  -fx-font-size: 15px;
+  -fx-font-weight: bold;
+  -fx-text-decoration: none;
+  -fx-padding: 5 10 5 10;
+  -fx-cursor: hand; }
+  #add-button:hover {
+    -fx-background-color: #2d6365; }
+  #add-button:active {
+    -fx-position: relative;
+    -fx-top: 1px; }
+
+#add-form {
+  -fx-padding: 10px;
+  -fx-background-color: #8cc17b;
+  -fx-border-width: 10px;
+  -fx-border-color: #2d6365;
+  -fx-border-width: 0px 0px 5px 0px;
+  -fx-background-radius: 2%; }
+  > #add-form#title {
+    -fx-font-size: 20px;
+    -fx-font-style: italic; }
+  > #add-form#separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+    /* its make really one-pixel-border */
+    -fx-border-color: #b7d0d4; }
+
+/* The increment and decrement button CSS class of scrollbar */
+.increment-button, .decrement-button {
+  -fx-background-color: transparent;
+  -fx-background-radius: 2em; }
+
+/* The main scrollbar **track** CSS class  */
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+  -fx-background-color: transparent;
+  -fx-border-color: derive(gray, 80%);
+  -fx-background-radius: 2em;
+  -fx-border-radius: 2em; }
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+  -fx-background-color: derive(black, 90%);
+  -fx-background-insets: 2, 0, 0;
+  -fx-background-radius: 2em; }
+
+/*# sourceMappingURL=style.css.map */

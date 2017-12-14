@@ -63,7 +63,7 @@ public class ArticleList extends AnchorPane {
     public ArticleList setArticles(Collection<Article> articles){
         LinkedList<Node> list = new LinkedList<>();
         articles.forEach((art) ->{
-            ArticleController articleComponent = new ArticleController();
+            ArticleController articleComponent = new ArticleController(art.getUrl().toString());
             articleComponent.setTitle(art.getTitle());
             list.addLast(articleComponent);
         });
@@ -73,7 +73,7 @@ public class ArticleList extends AnchorPane {
     }
 
     public ArticleList add(Article article){
-        ArticleController articleComponent = new ArticleController();
+        ArticleController articleComponent = new ArticleController(article.getUrl().toString());
         articleComponent.setTitle(article.getTitle());
         articlesNodeList.add(articlesNodeList.size(), articleComponent);
         this.articlesList.add(articlesList.size(), article);
@@ -81,7 +81,7 @@ public class ArticleList extends AnchorPane {
     }
 
     public ArticleList add(int position, Article article){
-        ArticleController articleComponent = new ArticleController();
+        ArticleController articleComponent = new ArticleController(article.getUrl().toString());
         articleComponent.setTitle(article.getTitle());
         articlesNodeList.add(position, articleComponent);
         this.articlesList.add(position, article);

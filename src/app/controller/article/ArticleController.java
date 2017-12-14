@@ -5,7 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 /**
  * Created by Leonardo on 01/12/2017.
@@ -14,8 +17,11 @@ public class ArticleController extends HBox {
     @FXML
     Label title;
 
+    String _url;
 
-    public ArticleController() {
+
+    public ArticleController(String url) {
+        _url = url;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../view/article.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -32,6 +38,12 @@ public class ArticleController extends HBox {
     }
 
     public void onClick(){
-        System.out.println("hola");
+        try {
+            Desktop.getDesktop().browse(new URL(_url).toURI());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
     }
 }

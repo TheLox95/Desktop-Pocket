@@ -82,30 +82,6 @@ public class Controller extends AnchorPane{
         this._buildSideMenu();
         articleListComponent = new ArticleList();
         centerPane.getChildren().add(articleListComponent);
-        try {
-            Article art = new Article(546, new URL("http://www.google.com/"), "sample", true, true, "asdasd", true, 654, 1512658297);
-            ArrayList list = new ArrayList<String>();
-            list.add("hola");
-            list.add("asda");
-            list.add("asd");
-            list.add("werw");
-            list.add("5235");
-            list.add("yery");
-            list.add("tyj");
-            list.add("rths");
-            list.add("457h");
-            list.add("rth4");
-            list.add("4gggg");
-            art.setTags(list);
-            articlesArray.put(art.getTitle(), art);
-            ArticleController artCon = new ArticleController();
-            articlesControllerList.add(artCon);
-            artCon.setTitle(art.getTitle());
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
         _dao.getArticleEnqueue((urlList) -> {
             for (String urlInQueue :urlList) {
                 _dao.postArticleToApi(urlInQueue, (art) -> {
@@ -137,7 +113,7 @@ public class Controller extends AnchorPane{
 
             for (Article art:list) {
                 this.articlesArray.put(art.getTitle(), art);
-                ArticleController artCon = new ArticleController();
+                ArticleController artCon = new ArticleController(art.getUrl().toString());
                 articlesControllerList.add(artCon);
                 artCon.setTitle(art.getTitle());
                 articleListComponent.add(art);
@@ -163,7 +139,7 @@ public class Controller extends AnchorPane{
         for (Article a: art) {
             if (this.articlesArray.containsKey(a.getTitle()) == false){
                 articlesArray.put(a.getTitle(), a);
-                ArticleController artCon = new ArticleController();
+                ArticleController artCon = new ArticleController(a.getUrl().toString());
                 articlesControllerList.add(artCon);
                 artCon.setTitle(a.getTitle());
                 if (articlesControllerList.size() == 0){
