@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="197.0" type="javafx.scene.layout.AnchorPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+   <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+         <AnchorPane fx:id="container" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER" />
+      </center>
+      <bottom>
+        <AnchorPane style="-fx-background-color: #b7d0d4;" BorderPane.alignment="CENTER">
+           <children>
+              <TextField fx:id="searchTextBox" alignment="CENTER" styleClass="searchTextBox" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <font>
+                     <Font size="14.0" />
+                  </font></TextField>
+           </children>
+        </AnchorPane>
+      </bottom>
+   </BorderPane>
+</fx:root>

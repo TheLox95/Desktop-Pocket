@@ -1,0 +1,163 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #8cc17b;
+$secondary-color: #5b874d;
+$tertiary-color: #2d6365;
+$quaternary-color: #68b8ba;
+$quinary-color: #b7d0d4;
+
+.background {
+  -fx-background-color: $tertiary-color;
+}
+
+.scroll-pane > .viewport {
+  -fx-background-color: transparent;
+}
+
+.scroll-pane {
+  -fx-background-color: #469280;
+}
+
+
+.side-menu{
+  -fx-background-color: $secondary-color;
+  .icon{
+    -fx-fill: white;
+  }
+  &:disabled{
+    -fx-opacity: 0.5;
+  }
+  .iconButton:hover{
+    -fx-border-color: transparent transparent transparent white;
+    -fx-border-width:5;
+    -fx-cursor: hand;
+  }
+}
+
+.article{
+  -fx-background-color: $quinary-color;
+  .artitle-title{
+    -fx-color: #469280;
+  }
+}
+
+.article-list {
+  -fx-spacing: 20px;
+}
+
+.tagPane{
+  -fx-background-radius: 50;
+  -fx-background-color: $primary-color;
+  -fx-opacity: 0.5;
+
+  &.unselected{
+    -fx-cursor: hand;
+  }
+
+  &.unselected:hover{
+    -fx-background-color: $quinary-color;
+  }
+
+  &.selected{
+    -fx-background-color: $quinary-color;
+  }
+
+  &.deactivated{
+    -fx-cursor: default;
+    -fx-background-color: $secondary-color;
+  }
+
+  .closeMark{
+    -fx-background-radius: 25;
+    -fx-background-color: black;
+    -fx-opacity: 0.5;
+    -fx-padding: 1px 5px 1px 5px;
+  }
+
+  &:hover .closeMark{
+    -fx-opacity: 1;
+  }
+
+  .tagLabel{
+    -fx-font-size: 14;
+    -fx-padding: 10px;
+  }
+}
+
+.searchTextBox{
+  -fx-padding: 15px;
+  -fx-background-radius: 50;
+  -fx-background-color: darkslategrey;
+  -fx-font-size: 18px;
+}
+
+#add-button{
+  -fx-box-shadow:inset 0px 1px 3px 0px #68b9ba;
+  -fx-background-color: $secondary-color;
+  -fx-border-radius:5px;
+  -fx-border-width:1px;
+  -fx-border-color: #2d6365;
+  -fx-border-style: solid;
+  -fx-display:inline-block;
+  -fx-color:#ffffff;
+  -fx-font-family:Arial;
+  -fx-font-size:15px;
+  -fx-font-weight:bold;
+  -fx-text-decoration:none;
+  -fx-padding: 5 10 5 10;
+  -fx-cursor: hand;
+
+  &:hover{
+    -fx-background-color:$tertiary-color;
+  }
+  &:active{
+    -fx-position:relative;
+    -fx-top:1px;
+  }
+}
+
+#add-form{
+  -fx-padding: 10px;
+  -fx-background-color: $primary-color;
+  -fx-border-width: 10px;
+  -fx-border-color: $tertiary-color;
+  -fx-border-width: 0px 0px 5px 0px;
+  -fx-background-radius: 2%;
+
+  > &#title{
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+  }
+
+  > &#separator  *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0; /* its make really one-pixel-border */
+    -fx-border-color: $quinary-color;
+  }
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.increment-button ,.decrement-button {
+  -fx-background-color:transparent;
+  -fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+  -fx-background-color: transparent;
+  -fx-border-color:derive(gray,80%);
+
+  -fx-background-radius: 2em;
+  -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+  -fx-background-color:derive(black,90%);
+  -fx-background-insets: 2, 0, 0;
+  -fx-background-radius: 2em;
+
+}
